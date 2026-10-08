@@ -2,39 +2,46 @@
 
 ![Luxo](/images/LuxoV2.jpeg)
 
-Luxo jr. je jen hricka - roboticka lampa inspirovana Luxi jr. od firmy Pixar
+Luxo jr. je jen hříčka – robotická lampa inspirovaná Luxem jr. od firmy Pixar.
 
-### Historie:
+### Historie
 
-Na rozdil od ostatnich, nebyla lampa niky minena jako seriozni projekt. Cilem hry
-bylo mit "zlobivou lampu", ktera jen vyrusuje. Soucasti "reseni" mela byt roboticka
-lampa. Coz se stalo hned dvakrat - existuji prototypy V1 a V2 ktere se lisi snad uplne ve vsem.
-Druha cast reseni je computer vision modul ktery zajistuje oci lampy. Ten ne realizaci teprve ceka
+Na rozdíl od ostatních projektů nebyla lampa nikdy zamýšlena jako seriózní projekt. Cílem bylo vytvořit „zlobivou lampu“, která jen vyrušuje. Součástí tohoto „řešení“ měla být robotická lampa.
+
+To se nakonec podařilo hned dvakrát – vznikly prototypy V1 a V2, které se od sebe liší snad úplně ve všem.
+
+Druhou částí řešení je modul computer vision, který má zajišťovat „oči“ lampy. Jeho realizace zatím čeká.
 
 ### HW
 
-Obe lampy jsou kompletne uzavrene webove systemy, ktere obsahuji veskerou elektroniku potrebnou k pohybu
-+ web server + rest-api. Lampy se hlasi na 10.0.0.95 (V1) a 10.0.0.84 (V2). Pohani je processor ESP32
-a pres rest-api 
+Obě lampy jsou kompletně uzavřené webové systémy, které obsahují veškerou elektroniku potřebnou k pohybu, webový server a REST API.
+
+Lampy jsou dostupné na adresách `10.0.0.95` (V1) a `10.0.0.84` (V2). Pohání je procesor ESP32 a ovládání probíhá přes REST API.
 
 #### V1
-Prvni verze je postavena na klasickych RC servech. je plne funkcni, jen nektera serva uz jsou tzv. na hrane.
-Funkcionalita je videt na videu https://photos.app.goo.gl/dxM9xuKke8i4iCDH8 ..a stejne tak roboticke pohony
-LX-16 ktere jsou zakladem verze V2
 
+První verze je postavena na klasických RC servách. Je plně funkční, jen některá serva už jsou tzv. na hraně.
+
+Funkcionalitu lampy je možné vidět na [tomto videu](https://photos.app.goo.gl/dxM9xuKke8i4iCDH8). Na stejném principu jsou založeny také robotické pohony LX-16, které jsou použity ve verzi V2.
 
 ![Luxo](/images/LuxoV1.jpeg)
 ![Luxo](/images/LuxoV1ctl.jpeg)
 
 #### V2
-RC serva jsou nahrazena pohony Lobot LX-16. Jednalo se o tak velkou zmenu, ze se vyplatilo postavi komplet druhy prototyp.
+
+RC serva byla nahrazena pohony Lobot LX-16. Jednalo se o natolik zásadní změnu, že se vyplatilo postavit kompletně nový prototyp.
+
 ![Luxo](/images/LuxoV2.jpeg)
 ![Luxo](/images/LuxoV2ctl.jpeg)
 
-Obe lampy najednou jsou pak videt zde: https://photos.app.goo.gl/JdUXHv19hhEEWmWk9
+Obě lampy najednou jsou vidět [zde](https://photos.app.goo.gl/JdUXHv19hhEEWmWk9).
 
-Vse je plne funkcni, samostatny vyvoj lamp je ukoncen. Lampy jsou pripojeny na domaci wifi sit a jsou rizeny
-centralnim pocitacem. V sekci modely jsou kompletni data na tisk prevodovek jak pro verzi V1 tak i V2.
-Elektroniku tvori regulovany spinany zdroj v podstavci lamp spolu s ESP32 ktere primo ovlada serva, nebo
-interface desku na LX-16 ktera jedou v rezimu daisy chain. Svetelny zdroj ovlada maly servomodul.
+### Stav projektu
 
+Vše je plně funkční a samostatný vývoj lamp je ukončen. Lampy jsou připojeny k domácí Wi-Fi síti a jsou řízeny centrálním počítačem.
+
+V sekci `modely` jsou k dispozici kompletní data pro tisk převodovek pro verzi V1 i V2.
+
+Elektroniku tvoří regulovaný spínaný zdroj v podstavci lampy spolu s ESP32. To přímo ovládá serva u verze V1, případně interface desku pro pohony LX-16 u verze V2. Pohony LX-16 jsou zapojeny v režimu daisy chain.
+
+Světelný zdroj ovládá malý relemodul.
