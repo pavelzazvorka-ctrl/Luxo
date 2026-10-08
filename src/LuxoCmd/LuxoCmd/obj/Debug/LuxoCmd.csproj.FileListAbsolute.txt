@@ -1,0 +1,11 @@
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\obj\Debug\LuxoCmd.csproj.AssemblyReference.cache
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\obj\Debug\LuxoCmd.csproj.SuggestedBindingRedirects.cache
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\obj\Debug\LuxoCmd.csproj.CoreCompileInputs.cache
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\bin\Debug\LuxoCmd.exe.config
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\bin\Debug\LuxoCmd.exe
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\bin\Debug\LuxoCmd.pdb
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\bin\Debug\Newtonsoft.Json.dll
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\bin\Debug\Newtonsoft.Json.xml
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\obj\Debug\LuxoCmd.csproj.CopyComplete
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\obj\Debug\LuxoCmd.exe
+C:\develop\Pinokio\src\LuxoCmd\LuxoCmd\obj\Debug\LuxoCmd.pdb

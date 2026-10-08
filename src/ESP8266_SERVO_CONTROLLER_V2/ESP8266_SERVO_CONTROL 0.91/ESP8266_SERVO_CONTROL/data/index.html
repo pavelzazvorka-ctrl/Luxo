@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>ESP8266 Servo Control</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+
+<body>
+        <div class="container simple text-center">
+</br><br>
+        <h1 class="display-4">Luxo jr. Servo Control 0.90 LX</h1><br>
+	<img src="luxo.png">
+        <p class="lead">ESP8266 internal web-server test/set page<br>
+	POST angle: 0..180 to url/servo/1 .. url/servo/5 .. url/light</p>
+        <hr class="my-4">
+ 
+        <p id="currentAngle5" class="display-4" style="text-align:left">Current Value : 45°</p>
+        <input type="range" name="angle5" id="range5" min="0" max="180" value="45" class="custom-range" style="background-color:#DDDDFF"></br><br>
+
+        <p id="currentAngle4" class="display-4" style="text-align:left">Current Value : 90°</p>
+        <input type="range" name="angle4" id="range4" min="45" max="113" value="90" class="custom-range" style="background-color:#DDDDDD"></br><br>
+
+        <p id="currentAngle3" class="display-4" style="text-align:left">Current Value : 90°</p>
+        <input type="range" name="angle3" id="range3" min="60" max="133" value="90" class="custom-range" style="background-color:#DDFFDD"></br><br>
+
+        <p id="currentAngle2" class="display-4" style="text-align:left">Current Value : 110°</p>
+        <input type="range" name="angle2" id="range2" min="95" max="140" value="95" class="custom-range" style="background-color:#FFFFDD"></br><br> 
+
+        <p id="currentAngle1" class="display-4" style="text-align:left">Current Value : 90°</p>
+        <input type="range" name="angle1" id="range1" min="0" max="180" value="90" class="custom-range" style="background-color:#FFDDDD"></br><br>
+
+        <p id="currentLight" class="display-4" style="text-align:left">Light : ON</p>
+        <input type="range" name="light" id="light" min="0" max="1" step="1" value="1" class="custom-range" style="background-color:#FFFFFF"></br><br>
+ 
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $("#range1").on("input", () => {
+                $("#currentAngle1").text("Current Value : " + $("#range1").val() + "°");
+                $.post("/servo/1", {
+                    angle: $("#range1").val(),
+                });
+            });
+            $("#range2").on("input", () => {
+                $("#currentAngle2").text("Current Value : " + $("#range2").val() + "°");
+                $.post("/servo/2", {
+                    angle: $("#range2").val(),
+                });
+            });
+            $("#range3").on("input", () => {
+                $("#currentAngle3").text("Current Value : " + $("#range3").val() + "°");
+                $.post("/servo/3", {
+                    angle: $("#range3").val(),
+                });
+            });
+            $("#range4").on("input", () => {
+                $("#currentAngle4").text("Current Value : " + $("#range4").val() + "°");
+                $.post("/servo/4", {
+                    angle: $("#range4").val(),
+               });
+            });
+            $("#range5").on("input", () => {
+                $("#currentAngle5").text("Current Value : " + $("#range5").val() + "°");
+                $.post("/servo/5", {
+                    angle: $("#range5").val()
+                });
+            });
+            $("#light").on("input", () => {
+                $("#currentLight").text("Light : " + ( $("#light").val()>0 ? "ON" : "OFF" )   + "");
+                $.post("/light/0", {
+                    light: $("#light").val(),
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
